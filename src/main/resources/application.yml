@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/weather_diary?serverTimezone=UTC&characterEncoding=UTF-8
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: weatherAdmin
+    password: 1234
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+openWeather:
+  apikey: 8d0423284b2358d18adbf6a00e74ec6b
+  url: https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=
+
+logging:
+  config: classpath:logback-spring.xml
